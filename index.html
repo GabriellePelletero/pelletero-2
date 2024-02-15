@@ -1,53 +1,178 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sample Web Page</title>
+    <title>Portfolio</title>
     <style>
       .flex-container {
         display: flex;
         border-style: solid;
-        border-width: 5px;
+        border-width: 1px;
         border-color: black;
+        background-color: white;
+        height: 50px;
+        line-height: 10px;
+        text-align: center;
+        margin-bottom: 100px;
       }
+
+      .picture-container {
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 50px;
+      }
+
+      .picture-box {
+        width: 700px;
+        height: 350px;
+        border: 1px solid black;
+        margin: 0 auto;
+      }
+
       .flex-item {
         border-style: solid;
+        border-width: 0px;
+        border-color: white;
+      }
+
+      .flex-nav {
+        border-style: solid;
         border-width: 2px;
-        border-color: black;
+        border-color: white;
+      }
+
+      .previousprojs-container {
+        display: flex;
+        height: 300px;
+        margin-bottom: 350px;
+        margin-top: 150px;
+        text-align: center;
+      }
+
+      .skillsbio-container {
+        display: flex;
+        height: 70px;
+        margin-bottom: 350px;
+        margin-top: 150px;
+        text-align: center;
+      }
+
+      hr {
+        border: 0;
+        height: 1px;
+        background-color: black;
+        margin: 20px 0;
+      }
+
+      #intro h1 {
+        font-size: 3em;
+        text-align: center;
+      }
+
+      section h2 {
+        font-size: 2.5em;
+      }
+
+      #intro img {
+        width: 35%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
+
+      body {
+        font-family: sans-serif;
       }
     </style>
   </head>
 
-  <body>
-    <div class="flex-container">
-      <div class="flex-item" style="flex: 4">
-        <h1>1</h1>
-        <p>This is a paragraph</p>
+  <body style="background-image: url('wallpaper.png'); background-size: cover">
+    <header>
+      <div class="flex-container">
+        <div class="flex-nav" style="flex: 3">
+          <p><a href="#intro">Home</a></p>
+        </div>
+        <div class="flex-nav" style="flex: 3">
+          <p><a href="#project">Project</a></p>
+        </div>
+        <div class="flex-nav" style="flex: 3">
+          <p><a href="#skills">Skills</a></p>
+        </div>
+        <div class="flex-nav" style="flex: 3">
+          <p><a href="#autobio">Autobiography</a></p>
+        </div>
       </div>
-      <div class="flex-item" style="flex: 3">
-        <h1>2</h1>
-        <p>This is another paragraph</p>
-      </div>
-      <div class="flex-item" style="flex: 3">
-        <h1>3</h1>
-        <p>This is another paragraph</p>
-        <p>This is another paragraph</p>
-      </div>
-      <div class="flex-item" style="flex: 3">
-        <h1>4</h1>
-        <p>This is another paragraph</p>
-      </div>
-      <div class="flex-item" style="flex: 3">
-        <h1>5</h1>
-        <p>This is another paragraph</p>
-        <p>This is another paragraph</p>
-        <p>This is another paragraph</p>
-        <p>This is another paragraph</p>
-        <p>This is another paragraph</p>
-      </div>
-      <div class="flex-item" style="flex: 3">
-        <h1>6</h1>
-        <p>This is another paragraph</p>
-      </div>
-    </div>
+    </header>
+
+    <main>
+      <section id="intro">
+        <div class="picture-container">
+          <img src="profile.jpeg" />
+          <h1>Hello, I'm Gabrielle C. Pelletero.</h1>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="project">
+        <div class="previousprojs-container">
+          <div class="flex-item" style="flex: 6">
+            <h2>Project</h2>
+            <p>
+              The project was made in CMSC 22 wherein we created a shooting
+              game. Stranger Things is a <br />
+              shooting game inspired by the netflix series "Stranger Things".
+              The game mainly consists of 2 <br />
+              characters, Eleven and the demogorgons. The goal is to save Will
+              by earning enough points and <br />
+              without losing all 3 lives.
+            </p>
+
+            <img src="game1.png" style="width: 300px; height: auto" />
+            <img src="game2.png" style="width: 300px; height: auto" />
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="skills">
+        <div class="skillsbio-container">
+          <div class="flex-item" style="flex: 6">
+            <h2>Skills</h2>
+            <p>Web Programming</p>
+            <p>Python Programming</p>
+            <p>C Programming</p>
+            <p>Java Programming</p>
+            <p>Game Development</p>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="autobio">
+        <div class="skillsbio-container">
+          <div class="flex-item" style="flex: 6">
+            <h1>Autobiography</h1>
+            <p>
+              My name's Gabrielle Pelletero, born on May 7, 2003, in Iligan
+              City. Currently, I'm a senior student <br />
+              majoring in Computer Science at the University of the Philippines
+              Los Baños. Alongside my studies, <br />
+              I share my life with a golden retriever named Peggy, and I'm the
+              third of three siblings in my family. <br />
+              Both my elementary and secondary education were completed at La
+              Salle Academy in Mindanao. My <br />
+              interests lie in web programming and game development, and I've
+              honed my programming skills <br />
+              through various projects and exercises. Post-graduation, my
+              aspiration is to secure a Frontend Software <br />
+              Engineer position at Gugil Co.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
